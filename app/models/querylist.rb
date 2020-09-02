@@ -1,0 +1,2 @@
+class Querylist < ApplicationRecord
+end

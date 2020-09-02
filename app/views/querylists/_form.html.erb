@@ -1,0 +1,27 @@
+<%= form_for(querylist) do |f| %>
+  <% if querylist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(querylist.errors.count, "error") %> prohibited this querylist from being saved:</h2>
+
+      <ul>
+      <% querylist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :emailaddres %>
+    <%= f.text_field :emailaddres %>
+  </div>
+
+  <div class="field">
+    <%= f.label :query %>
+    <%= f.text_field :query %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
