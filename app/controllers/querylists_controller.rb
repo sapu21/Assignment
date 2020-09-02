@@ -5,7 +5,7 @@ class QuerylistsController < ApplicationController
   # GET /querylists
   # GET /querylists.json
   def index
-    @querylists =  HTTParty.post("http://66.175.217.67:3020/argames/getQuery", :body => { :checkFilter => '' }, :headers => {"Authorization" => "Bearer 5afe34f322478bc5352a3d988ed4ccb18f7a409160339038c83c772c8a6a7387eb3caf90d064861965eec7eb210286ba"})
+    @querylists =  HTTParty.post("http://66.175.217.67:3020/argames/getQuery", :body => { :checkFilter => '' }, :headers => {"Authorization" => "Bearer " + ENV["API_KEY"] })
   end
 
   # GET /querylists/1
